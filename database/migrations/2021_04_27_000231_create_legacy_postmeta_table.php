@@ -13,7 +13,7 @@ class CreateLegacyPostmetaTable extends Migration
      */
     public function up()
     {
-        Schema::create('legacy_postmeta', function (Blueprint $table) {
+        Schema::create('postmeta', function (Blueprint $table) {
             $table->bigIncrements('id');
 		    $table->bigInteger('post_id')->unsigned()->default(0);
 		    $table->string('meta_key')->nullable()->default(NULL);
@@ -28,6 +28,6 @@ class CreateLegacyPostmetaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('legacy_postmeta');
+        Schema::dropIfExists('postmeta');
     }
 }

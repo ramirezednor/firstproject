@@ -13,7 +13,7 @@ class CreateLegacyUsermetaTable extends Migration
      */
     public function up()
     {
-        Schema::create('legacy_usermeta', function (Blueprint $table) {
+        Schema::create('usermeta', function (Blueprint $table) {
             $table->bigIncrements('id');
 		    $table->bigInteger('user_id')->unsigned()->default(0);
 		    $table->string('meta_key')->nullable()->default(NULL);
@@ -28,6 +28,6 @@ class CreateLegacyUsermetaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('legacy_usermeta');
+        Schema::dropIfExists('usermeta');
     }
 }

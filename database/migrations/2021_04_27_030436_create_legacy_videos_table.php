@@ -13,7 +13,7 @@ class CreateLegacyVideosTable extends Migration
      */
     public function up()
     {
-        Schema::create('legacy_videos', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->increments('id',8);
             $table->integer('user_id');
             $table->string('category',32);
@@ -37,6 +37,6 @@ class CreateLegacyVideosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('legacy_videos');
+        Schema::dropIfExists('videos');
     }
 }

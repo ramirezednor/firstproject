@@ -13,7 +13,7 @@ class CreateLegacySettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('legacy_settings', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('key',256)->nullable()->default(NULL);
             $table->longText('value')->nullable()->default(NULL);
@@ -27,6 +27,6 @@ class CreateLegacySettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('legacy_settings');
+        Schema::dropIfExists('settings');
     }
 }

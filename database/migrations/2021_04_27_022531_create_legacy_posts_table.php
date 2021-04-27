@@ -13,7 +13,7 @@ class CreateLegacyPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('legacy_posts', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->increments('id',16);
 		    $table->bigInteger('post_author')->unsigned()->default(0);
             $table->longText('post_content')->nullable()->default(NULL);
@@ -36,6 +36,6 @@ class CreateLegacyPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('legacy_posts');
+        Schema::dropIfExists('posts');
     }
 }

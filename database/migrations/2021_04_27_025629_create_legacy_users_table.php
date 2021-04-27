@@ -13,7 +13,7 @@ class CreateLegacyUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('legacy_users', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id',16);
             $table->string('firstname')->nullable()->default(NULL);
             $table->string('lastname')->nullable()->default(NULL);
@@ -40,6 +40,6 @@ class CreateLegacyUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('legacy_users');
+        Schema::dropIfExists('users');
     }
 }
