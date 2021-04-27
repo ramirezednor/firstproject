@@ -14,10 +14,10 @@ class CreateLegacyPostmetaTable extends Migration
     public function up()
     {
         Schema::create('legacy_postmeta', function (Blueprint $table) {
-		    $table->bigInteger('id',20)->unsigned();
-		    $table->bigInteger('post_id',20)->unsigned()->default('0');
-		    $table->string('meta_key')->nullable()->default('NULL');
-		    $table->text('meta_value')->nullable()->default('NULL');
+            $table->bigIncrements('id');
+		    $table->bigInteger('post_id')->unsigned()->default(0);
+		    $table->string('meta_key')->nullable()->default(NULL);
+		    $table->text('meta_value')->nullable()->default(NULL);
         });
     }
 

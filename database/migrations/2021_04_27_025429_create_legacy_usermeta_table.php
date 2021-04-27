@@ -14,10 +14,10 @@ class CreateLegacyUsermetaTable extends Migration
     public function up()
     {
         Schema::create('legacy_usermeta', function (Blueprint $table) {
-		    $table->bigInteger('id',20)->unsigned();
-		    $table->bigInteger('user_id',20)->unsigned()->default('0');
-		    $table->string('meta_key')->nullable()->default('NULL');
-		    ->nullable()->default('NULL');
+            $table->bigIncrements('id');
+		    $table->bigInteger('user_id')->unsigned()->default(0);
+		    $table->string('meta_key')->nullable()->default(NULL);
+		    $table->longText('meta_value')->nullable()->default(NULL);
         });
     }
 

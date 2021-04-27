@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bootstrap",
+    "\\database\\migrations",
+    "\\public"
   ],
-  "SelectedNode": "\\test-file-2.txt",
   "PreviewInSolutionExplorer": false
 }
